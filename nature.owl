@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf ="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	    xmlns:rdfs ="http://www.w3.org/2000/01/rdf-schema#"
+	    xmlns:xsd ="http://www.w3.org/2001/XMLSchema#"
+	    xmlns:owl ="http://www.w3.org/2002/07/owl#"
+	    xmlns ="http://www.cs.umbc.edu/ zding1/owl/nature.owl#">
+<owl:Ontology rdf:about="http://www.cs.umbc.edu/zding1/owl/nature.owl#">
+	<owl:versionInfo>v1.0</owl:versionInfo>
+</owl:Ontology>
+<owl:Class rdf:ID="Animal"/>
+<owl:Class rdf:ID="Male">
+	<rdfs:subClassOf rdf:resource="#Animal"/>
+</owl:Class>
+<owl:Class rdf:ID="Female">
+	<rdfs:subClassOf rdf:resource="#Animal"/>
+	<owl:disjointWith rdf:resource="#Male"/>
+</owl:Class>
+<owl:Class rdf:ID="Human">
+	<rdfs:subClassOf rdf:resource="#Animal"/>
+	<owl:unionOf rdf:parseType="Collection">
+		<owl:Class rdf:about="#Man"/>
+		<owl:Class rdf:about="#Woman"/>
+	</owl:unionOf>
+</owl:Class>
+<owl:Class rdf:ID="Man">
+	<owl:intersectionOf rdf:parseType="Collection">
+		<owl:Class rdf:about="#Human"/>
+		<owl:Class rdf:about="#Male"/>
+	</owl:intersectionOf>
+</owl:Class>
+<owl:Class rdf:ID="Woman">
+	<owl:intersectionOf rdf:parseType="Collection">
+		<owl:Class rdf:about="#Human"/>
+		<owl:Class rdf:about="#Female"/>
+	</owl:intersectionOf>
+</owl:Class>
+</rdf:RDF>

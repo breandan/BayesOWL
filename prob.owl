@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf ="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs ="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd ="http://www.w3.org/2001/XMLSchema#"
+	xmlns:owl ="http://www.w3.org/2002/07/owl#"
+	xmlns:dt ="http://www.cs.umbc.edu/ zding1/owl/dt.xsd#"
+	xmlns ="http://www.cs.umbc.edu/ zding1/owl/prob.owl#">
+<owl:Ontology rdf:about="http://www.cs.umbc.edu/ zding1/owl/prob.owl#">
+	<owl:versionInfo>v1.0</owl:versionInfo>
+</owl:Ontology>
+
+<owl:Variable rdf:ID="Animal">
+	<hasClass>nature.Animal</hasClass>
+</owl:Variable>
+
+<owl:Variable rdf:ID="Male">
+	<hasClass>nature.Male</hasClass>
+</owl:Variable>
+
+<owl:Variable rdf:ID="Female">
+	<hasClass>nature.Female</hasClass>
+</owl:Variable>
+
+<owl:Variable rdf:ID="Man">
+	<hasClass>nature.Man</hasClass>
+</owl:Variable>
+
+<owl:Variable rdf:ID="Woman">
+	<hasClass>nature.Woman</hasClass>
+</owl:Variable>
+
+<owl:Variable rdf:ID="Human">
+	<hasClass>nature.Human</hasClass>
+</owl:Variable>
+
+<owl:Proposition rdf:ID="a">
+	<hasVariable>Animal</hasVariable>
+	<hasState>True</hasState>
+</owl:Proposition>
+
+<owl:Proposition rdf:ID="b">
+	<hasVariable>Animal</hasVariable>
+	<hasState>False</hasState>
+</owl:Proposition>
+
+<owl:Proposition rdf:ID="c">
+	<hasVariable>Male</hasVariable>
+	<hasState>True</hasState>
+</owl:Proposition>
+
+<owl:Proposition rdf:ID="d">
+	<hasVariable>Male</hasVariable>
+	<hasState>False</hasState>
+</owl:Proposition>
+
+<owl:Proposition rdf:ID="e">
+	<hasVariable>Female</hasVariable>
+	<hasState>True</hasState>
+</owl:Proposition>
+
+<owl:Proposition rdf:ID="f">
+	<hasVariable>Female</hasVariable>
+	<hasState>False</hasState>
+</owl:Proposition>
+
+<owl:Proposition rdf:ID="g">
+	<hasVariable>Man</hasVariable>
+	<hasState>True</hasState>
+</owl:Proposition>
+
+<owl:Proposition rdf:ID="h">
+	<hasVariable>Man</hasVariable>
+	<hasState>False</hasState>
+</owl:Proposition>
+
+<owl:Proposition rdf:ID="i">
+	<hasVariable>Woman</hasVariable>
+	<hasState>True</hasState>
+</owl:Proposition>
+
+<owl:Proposition rdf:ID="j">
+	<hasVariable>Woman</hasVariable>
+	<hasState>False</hasState>
+</owl:Proposition>
+
+<owl:Proposition rdf:ID="k">
+	<hasVariable>Human</hasVariable>
+	<hasState>True</hasState>
+</owl:Proposition>
+
+<owl:Proposition rdf:ID="l">
+	<hasVariable>Human</hasVariable>
+	<hasState>False</hasState>
+</owl:Proposition>
+
+<owl:Probability rdf:ID="P(a)">
+	<hasPropCollection>m</hasPropCollection>
+	<hasValue>0.5</hasValue>
+</owl:Probability>
+
+<owl:PropCollection rdf:ID="m">
+	<hasProposition>a</hasProposition>
+</owl:PropCollection>
+
+<owl:Probability rdf:ID="P(c|a)">
+	<hasCondCollection>n</hasCondCollection>
+	<hasPropCollection>o</hasPropCollection>
+	<hasValue>0.5</hasValue>
+</owl:Probability>
+
+<owl:CondCollection rdf:ID="n">
+	<hasCondition>a</hasCondition>
+</owl:CondCollection>
+
+<owl:PropCollection rdf:ID="o">
+	<hasProposition>c</hasProposition>
+</owl:PropCollection>
+
+<owl:Probability rdf:ID="P(e|a)">
+	<hasCondCollection>p</hasCondCollection>
+	<hasPropCollection>q</hasPropCollection>
+	<hasValue>0.48</hasValue>
+</owl:Probability>
+
+<owl:CondCollection rdf:ID="p">
+	<hasCondition>a</hasCondition>
+</owl:CondCollection>
+
+<owl:PropCollection rdf:ID="q">
+	<hasProposition>e</hasProposition>
+</owl:PropCollection>
+
+<owl:Probability rdf:ID="P(k|a)">
+	<hasCondCollection>r</hasCondCollection>
+	<hasPropCollection>s</hasPropCollection>
+	<hasValue>0.1</hasValue>
+</owl:Probability>
+
+<owl:CondCollection rdf:ID="r">
+	<hasCondition>a</hasCondition>
+</owl:CondCollection>
+
+<owl:PropCollection rdf:ID="s">
+	<hasProposition>k</hasProposition>
+</owl:PropCollection>
+
+<owl:Probability rdf:ID="P(g|k)">
+	<hasCondCollection>t</hasCondCollection>
+	<hasPropCollection>u</hasPropCollection>
+	<hasValue>0.49</hasValue>
+</owl:Probability>
+
+<owl:CondCollection rdf:ID="t">
+	<hasCondition>k</hasCondition>
+</owl:CondCollection>
+
+<owl:PropCollection rdf:ID="u">
+	<hasProposition>g</hasProposition>
+</owl:PropCollection>
+
+<owl:Probability rdf:ID="P(i|k)">
+	<hasCondCollection>v</hasCondCollection>
+	<hasPropCollection>w</hasPropCollection>
+	<hasValue>0.51</hasValue>
+</owl:Probability>
+
+<owl:CondCollection rdf:ID="v">
+	<hasCondition>k</hasCondition>
+</owl:CondCollection>
+
+<owl:PropCollection rdf:ID="w">
+	<hasProposition>i</hasProposition>
+</owl:PropCollection>
+
+</rdf:RDF>
